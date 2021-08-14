@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+In this assignment let's build a **Faqs App** by applying the concepts we have learned till now.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Refer to image below:
 
-## Available Scripts
+<br/>
+<div style="text-align: center;">
 
-In the project directory, you can run:
+<img src="https://assets.ccbp.in/frontend/content/react-js/faqs-output-v2.gif" alt="faqs-output" style="max-width:70%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)" />
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br/>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Design Files
 
-### `npm test`
+you can find the demo link in https://vishufaqs.ccbp.tech/
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Project Set Up Instructions
 
-### `npm run build`
+- Download dependencies by running `npm install`
+- Start up the app using `npm start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Project Completion Instructions
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Add Functionality
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The app must have the following functionalities
 
-### `npm run eject`
+- When the plus icon is clicked in the FAQ
+    - The answer to the FAQ should be visible to the user.
+    - The plus icon should change to a minus icon.
+- When the minus icon is clicked in the FAQ
+    - The answer to the FAQ should be hidden to the user.
+    - The minus icon should change to a plus icon.
+- The `FaqItem` component will receive the details of the faq in the prop `faqData`.
+- Each faq object will have the following properties.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  | Key          | Data Type |
+  | -----------  | --------- |
+  | id           | Number    |
+  | questionText | String    |
+  | answerText   | String    |
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- The value of the key `id` should be used as a key to the `FaqItem` component.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Your task is to complete the implementation of
+  - `src/App.js`
+  - `src/App.css`
+  - `src/components/FaqItem/index.js`
+  - `src/components/FaqItem/index.css`
 
-## Learn More
+> #### Important Note
+>
+> **The following HTML attributes are required for the HTML image elements for the tests to pass**
+>
+> - The HTML image element to display the plus icon image should have the HTML
+>   attribute `alt` value as `plus`
+> - The HTML image element to display the minus icon image should have the HTML
+>   attribute `alt` value as `minus`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Quick Tips
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- The cursor CSS property sets the type of mouse cursor, if any, to show when the mouse pointer is over an element. Use the CSS property cursor with a value `pointer` to indicate a link.
+- An outline is a line that is drawn around an element, outside the border. The outline CSS shorthand property sets all the outline properties. Use the CSS property `outline` with value `none` to hide all the outline properties.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Resources
 
-### Analyzing the Bundle Size
+#### Images
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [https://assets.ccbp.in/frontend/react-js/faqs-plus-icon-img.png](https://assets.ccbp.in/frontend/react-js/faqs-plus-icon-img.png)
+- [https://assets.ccbp.in/frontend/react-js/faqs-minus-icon-img.png](https://assets.ccbp.in/frontend/react-js/faqs-minus-icon-img.png)
 
-### Making a Progressive Web App
+#### Colors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<div style="background-color: #cb8805; width: 150px; padding: 10px; color: white">Hex: #cb8805</div>
+<div style="background-color: #52606d; width: 150px; padding: 10px; color: white">Hex: #52606d</div>
+<div style="background-color: #9aa5b1; width: 150px; padding: 10px; color: white">Hex: #9aa5b1</div>
 
-### Advanced Configuration
+#### Border Colors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<div style="background-color: #d7dae6; width: 150px; padding: 10px; color: black">Hex: #d7dae6</div>
+<div style="background-color: #e4e7eb; width: 150px; padding: 10px; color: black">Hex: #e4e7eb</div>
 
-### Deployment
+#### Background Colors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<div style="background-color: #ffffff; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
+<div style="background-color: #f1f5f8; width: 150px; padding: 10px; color: black">Hex: #f1f5f8</div>
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Font-families
+
+- Roboto
+
+> ### _Things to Keep in Mind_
+>
+> - All components you implement should go in the `src/components` directory.
+> - Don't change the component folder names as those are the files being
+>   imported into the tests.
+> - **Do not remove the pre-filled code**
+> - Want to quickly review some of the concepts you’ve been learning? Take a
+>   look at the Cheat Sheets.
